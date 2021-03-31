@@ -56,7 +56,7 @@
     "mean-logger": "0.0.1",
     "meanio": "0.4.x",
     "method-override": "^1.0.0",
-    "mongoose": "^3.8.8",
+    "mongoose": "^5.12.3",
     "morgan": "^1.0.0",
     "passport": "^0.2.0",
     "passport-facebook": "^1.0.3",

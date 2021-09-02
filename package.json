@@ -5,11 +5,26 @@
   "private": false,
   "author": "Linnovate <mean@linnovate.net>",
   "contributors": [
-    { "name": "Lior Kesos", "mail": "lior@linnovate.net" },
-    { "name": "Yonatan Ellman", "mail": "yonatan@linnovate.net" },
-    { "name": "Ehud Shahak", "mail": "ehud@linnovate.net" },
-    { "name": "Amos Haviv", "mail": "mail@amoshaviv" },
-    { "name": "Drew Fyock", "mail": "drew@steelbisondev.com" }
+    {
+      "name": "Lior Kesos",
+      "mail": "lior@linnovate.net"
+    },
+    {
+      "name": "Yonatan Ellman",
+      "mail": "yonatan@linnovate.net"
+    },
+    {
+      "name": "Ehud Shahak",
+      "mail": "ehud@linnovate.net"
+    },
+    {
+      "name": "Amos Haviv",
+      "mail": "mail@amoshaviv"
+    },
+    {
+      "name": "Drew Fyock",
+      "mail": "drew@steelbisondev.com"
+    }
   ],
   "mean": "0.3.3",
   "repository": {
@@ -23,7 +38,9 @@
   "scripts": {
     "start": "node node_modules/grunt-cli/bin/grunt",
     "test": "node node_modules/grunt-cli/bin/grunt test",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "assetmanager": "^1.0.0",
@@ -47,16 +64,16 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-env": "^0.4.1",
+    "grunt-env": "^1.0.0",
     "grunt-nodemon": "0.2.1",
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^2.4.1",
     "mean-connect-mongo": "0.4.3",
     "gridfs-stream": "^0.5.1",
     "mean-logger": "0.0.1",
-    "meanio": "0.4.x",
+    "meanio": "0.6.8",
     "method-override": "^1.0.0",
-    "mongoose": "^3.8.8",
+    "mongoose": "^6.0.4",
     "morgan": "^1.0.0",
     "passport": "^0.2.0",
     "passport-facebook": "^1.0.3",
@@ -68,7 +85,8 @@
     "serve-favicon": "^2.0.0",
     "swig": "^1.3.2",
     "time-grunt": "^0.3.1",
-    "view-helpers": "^0.1.4"
+    "view-helpers": "^0.1.4",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "grunt-karma": "^0.8.2",
@@ -88,5 +106,6 @@
     "requirejs": "^2.1.11",
     "should": "3.3.1",
     "supertest": "0.11.0"
-  }
+  },
+  "snyk": true
 }
